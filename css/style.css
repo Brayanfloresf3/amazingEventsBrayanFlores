@@ -1,0 +1,25 @@
+.logo{
+    height: 6vh;
+}
+
+.carousel-inner {
+    height: auto;
+  }
+
+  .carousel-item img{
+      height: 40vh;
+      object-fit: cover;
+  }
+
+  label{
+      margin-right: 3vw;
+      margin-left: 0.5vw;
+  }
+
+  .card img{
+      height: 25vh;
+  }
+  
+  .row{
+      border: solid 2px red;
+  }
