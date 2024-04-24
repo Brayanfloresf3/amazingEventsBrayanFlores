@@ -1,25 +1,72 @@
-.logo{
-    height: 6vh;
+body {
+    background: linear-gradient(to bottom right, white, #E4D2A4);
 }
 
-.carousel-inner {
-    height: auto;
-  }
+header{
+    background-color: rgb(19, 18, 18);
+}
 
-  .carousel-item img{
+.nav-link{
+    color: #E4D2A4;
+}
+
+.navbar-nav .nav-link {
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #B88D26;
+}
+
+.icon{
+    height: 50px;
+}
+
+h2{
+    color: #E4D2A4;
+    text-shadow: 5px 5px 5px rgb(0, 0, 0);
+    font-family: "Rubik Mono One";
+    font-size: 5vh;
+}
+.slogan{
+    color: #E4D2A4;
+    text-shadow: 5px 5px 5px rgb(0, 0, 0);
+    font-family: monospace;
+    font-size: 2vh;
+}
+.carousel-item img{
       height: 40vh;
-      object-fit: cover;
-  }
+}
 
-  label{
-      margin-right: 3vw;
-      margin-left: 0.5vw;
-  }
-
-  .card img{
+.card img{
       height: 25vh;
+}
+
+.me-3{
+      width: 60px;
+}
+
+.imgCard{
+    object-fit: cover;
+}
+
+.myCards{
+    height: 70px;
+}
+
+label{
+    margin-right: 30px;
+}
+
+.cardHover .card:hover {
+    background-color: black;
+    color: #E4D2A4;
+    transition: width 0.2s ease;
+  }
+
+  footer{
+    background-color: rgb(19, 18, 18);
+    color: #F1F2ED;
   }
   
-  .row{
-      border: solid 2px red;
-  }
+ 
