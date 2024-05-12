@@ -26,18 +26,19 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-          <div class="navbar-nav text-center fs-4">
-            <a class="nav-link mx-3" href="/index.html">Home</a>
-            <a class="nav-link" href="/upcomingEvents.html">Upcoming Events</a>
-            <a class="nav-link mx-3" href="/pastEvents.html">Past Events</a>
-            <a class="nav-link" href="/contact.html">Contact</a>
-            <a class="nav-link mx-3" href="/stats.html">Stats</a>
+          <div class="navbar-nav text-center fs-5">
+            <a class="nav-link mx-3" href="#">Home</a>
+            <a class="nav-link" href="/html/upcomingEvents.html">Upcoming Events</a>
+            <a class="nav-link mx-3" href="/html/pastEvents.html">Past Events</a>
+            <a class="nav-link" href="/html/contact.html">Contact</a>
+            <a class="nav-link mx-3" href="/html/stats.html">Stats</a>
           </div>
         </div>
       </div>
     </nav>
   </header>
   <main>
+
     <!-- Carousel -->
     <div id="carouselExampleCaptions" class="carousel slide">
       <div class="carousel-indicators">
@@ -82,6 +83,7 @@
         <span class="visually-hidden">Next</span>
       </button>
     </div>
+
     <!-- Checkbox -->
     <div class="row d-flex mx-auto">
 
@@ -89,19 +91,19 @@
         <form action="/index.html" method="GET">
 
           <input class="form-check-input" type="checkbox" id="categoria1" name="categoria1">
-          <label class="fs-5" for="categoria1"> Categoria 1</label>
+          <label for="categoria1"> Categoria 1</label>
 
           <input class="form-check-input" type="checkbox" id="categoria2" name="categoria2">
-          <label class="fs-5" for="categoria2"> Categoria 2</label>
+          <label for="categoria2"> Categoria 2</label>
 
           <input class="form-check-input" type="checkbox" id="categoria3" name="categoria3">
-          <label class="fs-5" for="categoria3"> Categoria 3</label>
+          <label for="categoria3"> Categoria 3</label>
 
           <input class="form-check-input" type="checkbox" id="categoria4" name="categoria4">
-          <label class="fs-5" for="categoria4"> Categoria 4</label>
+          <label for="categoria4"> Categoria 4</label>
 
           <input class="form-check-input" type="checkbox" id="categoria5" name="categoria5">
-          <label class="fs-5" for="categoria5"> Categoria 5</label>
+          <label for="categoria5"> Categoria 5</label>
 
         </form>
       </div>
@@ -112,92 +114,35 @@
         </form>
       </div>
     </div>
-    <!-- Cards-->
-    <div class="container-fluid px-md-5 p-md-3">
-      <div class="row cardHover">
-        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
-          <div class="card mb-3">
-            <img src="/images/food_fair.jpg" class="card-img-top imgCard" alt="Food Fair">
-            <div class="card-body">
-              <h5 class="card-title">Festival of the collectivities</h5>
-              <p class="card-text myCards">Enjoy your favorite dishes from different countries in a unique event for the whole family.</p>
-              <div class="d-flex justify-content-between">
-                <div>
-                  <p class="text-start pt-2">Price: 5$</p>
-                </div>
-                <div><a href="/details.html" class="btn btn-primary">Details</a></div>
-              </div>
-            </div>
-          </div>
-        </div>
 
-        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
-          <div class="card mb-3">
-            <img src="/images/music_concert.jpg" class="card-img-top imgCard" alt="Music Concert">
-            <div class="card-body">
-              <h5 class="card-title">Metallica in concert</h5>
-              <p class="card-text myCards">The only concert of the most emblematic band in the world.</p>
-              <div class="d-flex justify-content-between">
-                <div>
-                  <p class="text-start pt-2">Price: 150$</p>
-                </div>
-                <div><a href="/details.html" class="btn btn-primary">Details</a></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
-          <div class="card mb-3">
-            <img src="/images/costume_party.jpg" class="card-img-top imgCard" alt="Costume Party">
-            <div class="card-body">
-              <h5 class="card-title">Halloween Night</h5>
-              <p class="card-text myCards">Come in your scariest costume character to win amazing prizes.</p>
-              <div class="d-flex justify-content-between">
-                <div>
-                  <p class="text-start pt-2">Price: 12$</p>
-                </div>
-                <div><a href="/details.html" class="btn btn-primary">Details</a></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
-          <div class="card mb-3">
-            <img src="/images/cinema.jpg" class="card-img-top imgCard" alt="Cinema">
-            <div class="card-body">
-              <h5 class="card-title">Avengers</h5>
-              <p class="card-text myCards">Marvel's Avengers 3d premiere the start of an epic saga with your best superheroes.</p>
-              <div class="d-flex justify-content-between">
-                <div>
-                  <p class="text-start pt-2">Price: 250$</p>
-                </div>
-                <div><a href="details.html" class="btn btn-primary">Details</a></div>
-              </div>
-            </div>
-          </div>
-        </div>
+    <!-- Container of Cards-->
+    <div class="container-fluid px-md-5 p-md-3" style="min-height: 50vh;">
+      <div class="row cardHover" id="containerCards">
       </div>
     </div>
 
-
+    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"></script>
+    <script src="/scripts/index.js"></script>
   </main>
   <footer>
     <div class="d-flex justify-content-center align-items-center flex-wrap px-3 justify-content-sm-between">
       <div class="d-flex justify-content-center m-3">
-        <a href="https://www.facebook.com/amazingEvents"><img src="/images/facebook.png" alt="facebook" class="me-3"></a>
-        <a href="https://www.instagram.com/amazingEvents/"><img src="/images/instagram.png" alt="instagram" class="me-3"></a>
-        <a href="https://api.whatsapp.com/send/?phone=3025277391&text&type=phone_number&app_absent=0"><img src="/images/whatsapp.png" alt="whatsapp" class="me-3"></a>
+        <a href="https://www.facebook.com/amazingEvents"><img src="/images/facebook.png" alt="facebook"
+            class="me-3"></a>
+        <a href="https://www.instagram.com/amazingEvents/"><img src="/images/instagram.png" alt="instagram"
+            class="me-3"></a>
+        <a href="https://api.whatsapp.com/send/?phone=3025277391&text&type=phone_number&app_absent=0"><img
+            src="/images/whatsapp.png" alt="whatsapp" class="me-3"></a>
       </div>
       <div class="align-items-center">
-        <p class="fs-xs-3 text-center">Cohort: Brayan Flores</p>
+        <p class="fs-xs-1 text-center">Cohort: Brayan Flores</p>
       </div>
 
     </div>
   </footer>
 </body>
+
 </html>

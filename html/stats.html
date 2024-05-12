@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="/css/style.css">
   <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon">
-  <title>Contact</title>
+  <title>Stats</title>
 </head>
 
 <body>
@@ -26,12 +26,12 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-          <div class="navbar-nav text-center fs-4">
-            <a class="nav-link mx-3" href="/index.html">Home</a>
-            <a class="nav-link" href="/upcomingEvents.html">Upcoming Events</a>
-            <a class="nav-link mx-3" href="/pastEvents.html">Past Events</a>
-            <a class="nav-link" href="#">Contact</a>
-            <a class="nav-link mx-3" href="/stats.html">Stats</a>
+          <div class="navbar-nav text-center fs-5">
+            <a class="nav-link mx-3" href="/html/index.html">Home</a>
+            <a class="nav-link" href="/html/upcomingEvents.html">Upcoming Events</a>
+            <a class="nav-link mx-3" href="/html/pastEvents.html">Past Events</a>
+            <a class="nav-link" href="/html/contact.html">Contact</a>
+            <a class="nav-link mx-3" href="#">Stats</a>
           </div>
         </div>
       </div>
@@ -52,21 +52,21 @@
         <div class="carousel-item active">
           <img src="/images/optional_banner_3.jpg" class="d-block w-100 object-fit-cover" alt="banner3">
           <div class="carousel-caption">
-            <h2>Contact</h2>
+            <h2>Stats</h2>
             <p class="fs-5 slogan">"Explore our event calendar and find something for every occasion."</p>
           </div>
         </div>
         <div class="carousel-item">
           <img src="/images/optional_banner_2.jpg" class="d-block w-100 object-fit-cover" alt="banner2">
           <div class="carousel-caption d-md-block">
-            <h2>Contact</h2>
+            <h2>Stats</h2>
             <p class="fs-5 slogan">"Make every day special with our amazing events."</p>
           </div>
         </div>
         <div class="carousel-item">
           <img src="/images/optional_banner_1.jpg" class="d-block w-100 object-fit-cover" alt="banner1">
           <div class="carousel-caption d-md-block">
-            <h2>Contact</h2>
+            <h2>Stats</h2>
             <p class="fs-5 slogan">"Discover the most exciting events near you!"</p>
           </div>
         </div>
@@ -82,28 +82,71 @@
         <span class="visually-hidden">Next</span>
       </button>
     </div>
-    <!-- form  -->
-    <div class="container-fluid d-flex justify-content-center align-items-center vh-100">
+    <!-- table -->
+    <div class="container-fluid overflow-x-auto d-flex vh-100 p-md-5">
 
-      <form style="width: 90vh;">
-    <div class="mb-3">
-        <label for="exampleInputName1" class="form-label col-auto fs-4">Nombre</label>
-        <input type="text" class="form-control fs-4" id="exampleInputName1" aria-describedby="nameHelp" placeholder="Your name">
-        <div id="nameHelp" class="form-text">Por favor, ingresa tu nombre completo.</div>
-    </div>
-    <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label col-auto fs-4">Dirección de correo electrónico</label>
-        <input type="email" class="form-control fs-4" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="name@example.com">
-        <div id="emailHelp" class="form-text">Nunca compartiremos tu correo electrónico con nadie más.</div>
-    </div>
-    <div class="form-floating mb-3">
-        <textarea class="form-control fs-4" id="floatingTextarea" style="height: 120px"></textarea>
-        <label for="floatingTextarea">Mensaje</label>
-    </div>
-    <button type="submit" class="btn btn-primary mt-3 fs-4">Enviar</button>
-</form>
-
-    
+      <table class="table m-4 text-center">
+        <thead>
+          <tr class="table-dark text-start ">
+            <th class="p-3 fs-5" colspan="3">Events Statictis</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="table-primary">
+            <td>Events with highest % of assistence </td>
+            <td>Events with lowest % of assistence</td>
+            <td>Events with large capacity</td>
+          </tr>
+          <tr>
+            <td>Content 1</td>
+            <td>Content 2</td>
+            <td>Content 3</td>
+          </tr>
+          <tr>
+            <td>Content 1</td>
+            <td>Content 2</td>
+            <td>Content 3</td>
+          </tr>
+          <tr>
+            <th class="table-dark text-start px-3 pb-1 pt-3 fs-5" colspan="3">Upcoming Events Statictis by categories
+            </th>
+          </tr>
+          <tr class="table-primary">
+            <td>Categories </td>
+            <td>Revenues</td>
+            <td>Percentage of assistence</td>
+          </tr>
+          <tr>
+            <td>Content 1 </td>
+            <td>Content 2</td>
+            <td>Content 3</td>
+          </tr>
+          <tr>
+            <td>Content 1</td>
+            <td>Content 2</td>
+            <td>Content 3</td>
+          </tr>
+          <tr>
+            <th class="table-dark text-start px-3 pb-1 pt-3 fs-5" colspan="3">Past Events Events Statictis by categories
+            </th>
+          </tr>
+          <tr class="table-primary">
+            <td>Categories </td>
+            <td>Revenues</td>
+            <td>Percentage of assistence</td>
+          </tr>
+          <tr>
+            <td>Content 1 </td>
+            <td>Content 2</td>
+            <td>Content 3</td>
+          </tr>
+          <tr>
+            <td>Content 1 </td>
+            <td>Content 2</td>
+            <td>Content 3</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
@@ -111,12 +154,14 @@
       crossorigin="anonymous"></script>
   </main>
   <footer>
-
     <div class="d-flex justify-content-center align-items-center flex-wrap px-3 justify-content-sm-between">
       <div class="d-flex justify-content-center m-3">
-        <a href="#"><img src="/images/facebook.png" alt="facebook" class="me-3"></a>
-        <a href="#"><img src="/images/instagram.png" alt="instagram" class="me-3"></a>
-        <a href="#"><img src="/images/whatsapp.png" alt="whatsapp" class="me-3"></a>
+        <a href="https://www.facebook.com/amazingEvents"><img src="/images/facebook.png" alt="facebook"
+            class="me-3"></a>
+        <a href="https://www.instagram.com/amazingEvents/"><img src="/images/instagram.png" alt="instagram"
+            class="me-3"></a>
+        <a href="https://api.whatsapp.com/send/?phone=3025277391&text&type=phone_number&app_absent=0"><img
+            src="/images/whatsapp.png" alt="whatsapp" class="me-3"></a>
       </div>
       <div class="align-items-center">
         <p class="fs-xs-3 text-center">Cohort: Brayan Flores</p>
