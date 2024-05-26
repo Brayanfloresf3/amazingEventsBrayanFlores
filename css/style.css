@@ -59,10 +59,17 @@ label{
     background-color: black;
     color: #E4D2A4;
     transition: width 0.2s ease;
-  }
+}
 
-  footer{
+footer{
     background-color: rgb(19, 18, 18);
     color: #F1F2ED;
-  }
+}
+  
+  /* #containerCheckbox {
+    gap: 1vh; /* Ajusta el espacio entre las casillas de verificación */
+
+svg{
+    width: 30px;
+}
   

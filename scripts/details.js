@@ -197,111 +197,45 @@ const data = {
 
 let events = data.events;
 
-// paint cards
-function paint(events) {
-  let containerCards = document.getElementById("containerCards");
-  containerCards.innerHTML = "";
+let containerDetails = document.getElementById("containerDetails");
 
-  if (events.length === 0) {
-    
-    let alert = document.createElement("div");
-    alert.classList.add("alert", "alert-primary", "d-flex", "align-items-center", "justify-content-center");
-    alert.setAttribute("role", "alert");
-    alert.innerHTML = `
-      <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2 f-1 my-1" viewBox="0 0 16 16" role="img" aria-label="Warning:">
-        <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-      </svg>
-      <div>
-        No events match your search criteria.
-      </div>
-    `;
-    containerCards.appendChild(alert);
-    return;
-  }
+let idDetails = window.location.href;
 
-  events.forEach(event => {
-    let tarjetaEvento = document.createElement("div");
-    tarjetaEvento.classList.add("col-xs-12", "col-sm-6", "col-md-6", "col-lg-3", "col-xl-3", "cardHover");
+idDetails = new URL(idDetails).searchParams.get("id");
 
-    tarjetaEvento.innerHTML = `
-      <div class="card mb-3">
-        <img src="${event.image}" class="card-img-top imgCard" alt="${event.category}">
-        <div class="card-body">
-          <h5 class="card-title">${event.name}</h5>
-          <p class="card-text myCards">${event.description}</p>
-          <div class="d-flex justify-content-between">
-            <div>
-              <p class="text-start pt-2">Price: ${event.price}</p>
+document.addEventListener("DOMContentLoaded", () => {
+  let cardDetails = events.filter((event) => event._id == idDetails);
+  cardDetails.forEach((event) => {
+    let divDetails = document.createElement("div");
+    divDetails.classList.add(
+      "row",
+      "g-0",
+      "bg-light",
+      "position-relative",
+      "img-thumbnail"
+    );
+    divDetails.style.maxWidth = "1450px";
+
+    divDetails.innerHTML = `
+            <div class="col-md-6 mb-md-4 p-md-4">
+                <img src="${event.image}" class="w-100 img-fluid" alt="${
+      event.name
+    }">
             </div>
-            <div><a href="/html/details.html?id=${event._id}" class="btn btn-primary">Details</a></div>
-          </div>
-        </div>
-      </div>
-    `;
-
-    containerCards.appendChild(tarjetaEvento);
+            <div class="col-md-6 p-4">
+                <h5 class="mt-0 text-center fs-4">${event.name}</h5>
+                <ul class="fs-5">
+                    <li>Date: ${event.date}</li>
+                    <li>Description: ${event.description}</li>
+                    <li>Category: ${event.category}</li>
+                    <li>Place: ${event.place}</li>
+                    <li>Capacity: ${event.capacity}</li>
+                    <li>${event.date > data.currentDate?"Estimate: " : "Assistance: "}${event.assistance || event.estimate}</li>
+                    <li>Price: $${event.price}</li>
+                </ul>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+        `;
+    containerDetails.appendChild(divDetails);
   });
-}
-
-paint(events, containerCards);
-
-// filter categories
-
-let allCategories = data.events.map((event) => event.category);
-let categories = [...new Set(allCategories)];
-
-// paint checkbox
-function paintCheckBox(categories) {
-  let containerCheckBox = document.getElementById("containerCheckbox");
-  containerCheckBox.innerHTML = "";
-
-  categories.forEach((category, index) => {
-    let newCheckBox = document.createElement("div");
-    newCheckBox.classList.add("form-check", "form-check-inline");
-    newCheckBox.innerHTML = `
-      <input class="form-check-input" type="checkbox" id="category-${
-        index + 1
-      }" value="${category}">
-      <label class="form-check-label" for="category-${
-        index + 1
-      }">${category}</label>
-    `;
-    containerCheckBox.appendChild(newCheckBox);
-  });
-}
-
-paintCheckBox(categories);
-
-
-// search text listener
-let searchInput = document.getElementById("search");
-searchInput.addEventListener("input", function () {
-  applyFilters();
 });
-
-// search checkbox listener
-let checkboxContainer = document.getElementById("containerCheckbox");
-checkboxContainer.addEventListener("change", function () {
-  applyFilters();
-});
-
-///////////////filters together
-function applyFilters() {
-  let searchText = searchInput.value.toLowerCase();
-  let checkboxes = document.querySelectorAll("input[type=checkbox]:checked");
-
-  // selected checkboxes
-  let selectedCategories = [];
-  checkboxes.forEach((checkbox) => {
-    selectedCategories.push(checkbox.value);
-  });
-
-  // compare checkbox and text
-  let filteredEvents = events.filter((event) => {
-    let textFilter = event.name.toLowerCase().includes(searchText) || event.description.toLowerCase().includes(searchText); 
-    let categoryFilter = selectedCategories.length === 0 || selectedCategories.includes(event.category);
-    return textFilter && categoryFilter;
-  }); 
-
-  paint(filteredEvents) 
-}

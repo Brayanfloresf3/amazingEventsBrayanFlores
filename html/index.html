@@ -20,7 +20,7 @@
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/index.html"><img class="icon" src="/images/amazing_brand.png" alt="logo"></a>
+        <a class="navbar-brand" href="#"><img class="icon" src="/images/amazing_brand.png" alt="logo"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
           aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -84,40 +84,26 @@
       </button>
     </div>
 
-    <!-- Checkbox -->
-    <div class="row d-flex mx-auto">
+    <div class="d-flex justify-content-around flex-wrap">
 
-      <div class="col-sm-12 col-md-8 col-lg-9 d-flex justify-content-center text-center p-2  mt-3" id="check">
-        <form action="/index.html" method="GET">
-
-          <input class="form-check-input" type="checkbox" id="categoria1" name="categoria1">
-          <label for="categoria1"> Categoria 1</label>
-
-          <input class="form-check-input" type="checkbox" id="categoria2" name="categoria2">
-          <label for="categoria2"> Categoria 2</label>
-
-          <input class="form-check-input" type="checkbox" id="categoria3" name="categoria3">
-          <label for="categoria3"> Categoria 3</label>
-
-          <input class="form-check-input" type="checkbox" id="categoria4" name="categoria4">
-          <label for="categoria4"> Categoria 4</label>
-
-          <input class="form-check-input" type="checkbox" id="categoria5" name="categoria5">
-          <label for="categoria5"> Categoria 5</label>
-
-        </form>
+      <!-- Container Checkbox -->
+      <div class="d-flex flex-wrap justify-content-center my-4 ms-4" id="containerCheckbox">
+        <!-- dinamic -->
       </div>
-      <div class="col-sm-12 col-md-4 col-lg-3 align-self-sm-center my-3 ">
+
+      <!-- Search Bar -->
+      <div class=" d-flex my-3 me-4 mb-4 pt-1">
         <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit"><i class="bi bi-search"></i></button>
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="search">
+          <button class="btn btn-outline-success" type="submit" id="searchButton"><i class="bi bi-search"></i></button>
         </form>
       </div>
     </div>
 
-    <!-- Container of Cards-->
+    <!-- Container Cards-->
     <div class="container-fluid px-md-5 p-md-3" style="min-height: 50vh;">
       <div class="row cardHover" id="containerCards">
+        <!-- dinamic -->
       </div>
     </div>
 
