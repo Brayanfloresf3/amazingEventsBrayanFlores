@@ -214,17 +214,16 @@ document.addEventListener("DOMContentLoaded", () => {
       "position-relative",
       "img-thumbnail"
     );
-    divDetails.style.maxWidth = "1450px";
+
+    divDetails.style.minHeight = "600px";
 
     divDetails.innerHTML = `
-            <div class="col-md-6 mb-md-4 p-md-4">
-                <img src="${event.image}" class="w-100 img-fluid" alt="${
-      event.name
-    }">
+            <div class="col-md-12 col-lg-6 p-md-4">
+                <img src="${event.image}" class="w-100 h-100 img-fluid object-fit-cover" alt="${event.name}">
             </div>
-            <div class="col-md-6 p-4">
-                <h5 class="mt-0 text-center fs-4">${event.name}</h5>
-                <ul class="fs-5">
+            <div class="col-md-12 col-lg-6 p-4">
+                <h5 class="mt-0 text-center fs-1 my-4">${event.name}</h5>
+                <ul class="fs-3 py-4">
                     <li>Date: ${event.date}</li>
                     <li>Description: ${event.description}</li>
                     <li>Category: ${event.category}</li>
@@ -233,7 +232,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     <li>${event.date > data.currentDate?"Estimate: " : "Assistance: "}${event.assistance || event.estimate}</li>
                     <li>Price: $${event.price}</li>
                 </ul>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                <p class="card-text text-end"><small class="text-muted">Last updated 3 mins ago</small></p>
             </div>
         `;
     containerDetails.appendChild(divDetails);
