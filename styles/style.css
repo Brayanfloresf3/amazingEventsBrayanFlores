@@ -55,11 +55,15 @@ label{
     margin-right: 30px;
 }
 
-.cardHover .card:hover {
+.cardHover .card {
+    transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+  }
+  
+  .cardHover .card:hover {
     background-color: black;
     color: #E4D2A4;
-    transition: width 0.2s ease;
-}
+    transform: scale(1.05); /* Efecto de expansión */
+  }
 
 footer{
     background-color: rgb(19, 18, 18);
@@ -74,7 +78,3 @@ svg{
     min-height: 900px;
 
 }
-
-/* ul li {
-    font-size: x-large;
-} */

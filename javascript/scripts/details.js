@@ -1,4 +1,3 @@
-import * as module from './myModule.js';
 
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -51,6 +50,8 @@ document.addEventListener("DOMContentLoaded", function () {
         `;
         containerDetails.appendChild(divDetails);
       });
-    });
+    }).catch(error => {
+      console.error('Error:', error);
+    })
 })
 
