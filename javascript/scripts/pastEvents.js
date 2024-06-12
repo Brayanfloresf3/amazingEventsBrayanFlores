@@ -1,4 +1,4 @@
-import * as module from './myModule.js';
+import * as module from '/javascript/modules/myFuntions.js';
 
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
       let categories = [...new Set(allCategories)];
 
       categories.sort((a, b) => a.localeCompare(b));
-      
+
       module.paintCheckBox(categories);
 
       // search text listener and filter
@@ -35,6 +35,9 @@ document.addEventListener("DOMContentLoaded", function () {
       let checkboxContainer = document.getElementById("containerCheckbox");
       checkboxContainer.addEventListener("change", function () {
         module.applyFilters(eventPast);
-      });
-    });
+      })
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    })
 });

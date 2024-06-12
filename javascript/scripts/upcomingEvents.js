@@ -1,4 +1,4 @@
-import * as module from './myModule.js';
+import * as module from '/javascript/modules/myFuntions.js';
 
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
       categories.sort((a, b) => a.localeCompare(b));
 
       module.paintCheckBox(categories);
-
+      
       // search text listener and filter
       let searchInput = document.getElementById("search");
       searchInput.addEventListener("input", function () {

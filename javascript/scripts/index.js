@@ -1,4 +1,4 @@
-import * as module from './myModule.js';
+import * as module from '/javascript/modules/myFuntions.js';
 
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -32,5 +32,8 @@ document.addEventListener("DOMContentLoaded", function () {
       checkboxContainer.addEventListener("change", function () {
         module.applyFilters(events);
       });
-    });
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    })
 });
